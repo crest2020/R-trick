@@ -7,3 +7,8 @@ options("repos" = c(CRAN="http://mirrors.cloud.tencent.com/CRAN/"))
 options(download.file.method = 'libcurl')
 
 options(url.method='libcurl')
+
+
+singleR
+
+("https://ltla.github.io/SingleRBook/using-the-classic-mode.html")
