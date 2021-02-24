@@ -25,6 +25,9 @@ samtools view -h -q 1 -F 4 -F 256 big.sort.dedup.bam |grep -v XA:Z |grep -v SA:Z
 
 
 library(data.table)
+
 geoData <- fread(txtFile, sep="\t")
+
 geneNames <- unname(unlist(geoData[,1, with=FALSE]))
+
 exprMatrix <- as.matrix(geoData[,-1, with=FALSE])
