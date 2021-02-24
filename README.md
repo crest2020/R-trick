@@ -22,3 +22,9 @@ samtools view -h -q 1 -F 4 -F 256 big.sort.dedup.bam |grep -v XA:Z |grep -v SA:Z
 -F 4：过滤掉没有比对上的reads；
 
 -F 256：过滤掉比对上的多次的reads。
+
+
+library(data.table)
+geoData <- fread(txtFile, sep="\t")
+geneNames <- unname(unlist(geoData[,1, with=FALSE]))
+exprMatrix <- as.matrix(geoData[,-1, with=FALSE])
