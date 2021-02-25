@@ -31,3 +31,9 @@ geoData <- fread(txtFile, sep="\t")
 geneNames <- unname(unlist(geoData[,1, with=FALSE]))
 
 exprMatrix <- as.matrix(geoData[,-1, with=FALSE])
+
+
+
+options(BioC_mirror="http://mirrors.tuna.tsinghua.edu.cn/bioconductor/")
+
+options("repos"=c(CRAN="http://mirrors.tuna.tsinghua.edu.cn/CRAN/"))
